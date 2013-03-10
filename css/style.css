@@ -1,0 +1,211 @@
+/******************************************************************
+Site Name: WelStand Insoles
+Author: Edward Unthank
+
+Stylesheet: Grid Stylesheet
+
+I've seperated the grid so you can swap it out easily. It's
+called at the top the style.less stylesheet.
+
+There are a ton of grid solutions out there. You should definitely
+experiment with your own. Here are some recommendations:
+
+http://gridsetapp.com - Love this site. Responsive Grids made easy.
+http://gridpak.com/ - Create your own responsive grid.
+
+The grid below is a combination of the 1140 grid and Twitter Boostrap. 
+I liked 1140 but Boostrap's grid was way more detailed so I merged them 
+together, let's see how this works out. If you want to use 1140, the original 
+values are commented out on each line.
+
+******************************************************************/
+/* line 23, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_grid.less */
+.onecol {
+  width: 5.801104972%;
+}
+/* 4.85%;  } /* grid_1  */
+/* line 24, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_grid.less */
+.twocol {
+  width: 14.364640883%;
+}
+/* 13.45%; } /* grid_2  */
+/* line 25, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_grid.less */
+.threecol {
+  width: 22.928176794%;
+}
+/* 22.05%; } /* grid_3  */
+/* line 26, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_grid.less */
+.fourcol {
+  width: 31.491712705%;
+}
+/* 30.75%; } /* grid_4  */
+/* line 27, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_grid.less */
+.fivecol {
+  width: 40.055248616%;
+}
+/* 39.45%; } /* grid_5  */
+/* line 28, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_grid.less */
+.sixcol {
+  width: 48.618784527%;
+}
+/* 48%;    } /* grid_6  */
+/* line 29, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_grid.less */
+.sevencol {
+  width: 57.182320438000005%;
+}
+/* 56.75%; } /* grid_7  */
+/* line 30, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_grid.less */
+.eightcol {
+  width: 65.74585634900001%;
+}
+/* 65.4%;  } /* grid_8  */
+/* line 31, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_grid.less */
+.ninecol {
+  width: 74.30939226%;
+}
+/* 74.05%; } /* grid_9  */
+/* line 32, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_grid.less */
+.tencol {
+  width: 82.87292817100001%;
+}
+/* 82.7%;  } /* grid_10 */
+/* line 33, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_grid.less */
+.elevencol {
+  width: 91.436464082%;
+}
+/* 91.35%; } /* grid_11 */
+/* line 34, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_grid.less */
+.twelvecol {
+  width: 99.999999993%;
+}
+/* 100%;   } /* grid_12 */
+/* line 37, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_grid.less */
+.onecol,
+.twocol,
+.threecol,
+.fourcol,
+.fivecol,
+.sixcol,
+.sevencol,
+.eightcol,
+.ninecol,
+.tencol,
+.elevencol,
+.twelvecol {
+  position: relative;
+  float: left;
+  margin-left: 2.762430939%;
+}
+/* line 43, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_grid.less */
+.first {
+  margin-left: 0;
+}
+/* line 47, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_grid.less */
+.last {
+  float: right;
+}
+/* Arrows */
+/* line 29, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+.arrowbox-example {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #999999;
+  margin: 30px 0;
+  max-width: 300px;
+  padding: 20px;
+}
+/* line 15, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/arrows.less */
+.arrowbox-example:after,
+.arrowbox-example:before {
+  bottom: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+/* line 26, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/arrows.less */
+.arrowbox-example:after {
+  border-color: transparent;
+  border-bottom-color: #ffffff;
+  border-width: 15px;
+  left: 50%;
+  margin-left: -15px;
+}
+/* line 44, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/arrows.less */
+.arrowbox-example:before {
+  border-color: transparent;
+  border-bottom-color: #999999;
+  border-width: 16px;
+  left: 50%;
+  margin-left: -16px;
+}
+/* line 36, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+.clearfix {
+  zoom: 1;
+}
+/* line 38, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+/* line 39, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+.clearfix:after {
+  clear: both;
+}
+/* text alignment */
+/* line 43, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+.text-left {
+  text-align: left;
+}
+/* line 44, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+.text-center {
+  text-align: center;
+}
+/* line 45, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+.text-right {
+  text-align: right;
+}
+/* General */
+/* line 48, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+body {
+  font-family: 'Abel', san-serif;
+  font-weight: 500;
+}
+/* line 53, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+li {
+  list-style: none;
+}
+/* line 56, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+li img {
+  max-width: 100%;
+}
+/* line 61, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+header {
+  box-sizing: border-box;
+  background: #f7901e;
+  z-index: 9999;
+}
+/* line 67, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+.section {
+  padding-bottom: 5em;
+}
+/* line 71, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+#testimonials {
+  text-align: center;
+}
+/* line 74, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+#testimonials li {
+  font-size: 1.25em;
+}
+/* line 77, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+#testimonials li.sixcol {
+  font-size: 1.618em;
+}
+/* line 88, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+#our-process #computer img {
+  width: 100%;
+  height: auto;
+}
