@@ -1,94 +1,37 @@
-@import "mixins/all";
+/******************************************************************
+Site Name: Actionable Ideas
+Author: Edward Unthank
+
+Stylesheet: Compilation of all stylesheets
+
+******************************************************************/
+
+
+// ==============================================
+// Import all ClearLess mixins
+// ==============================================
+
+@import "mixins/_all";
 @import "mixins/_grid";
+@import "mixins/_misc";
 
-// Default settings override
+// ==============================================
+// Variables & overrides
+// ==============================================
 
-@sprite-image: '../img/sprite.png';
-@using-modernizr: true;
-@using-ieclasses: true;
+@import "_variables";
 
-@total-columns: 16;
-@column-width: 60px;
-@gutter-width: 20px;
+// ==============================================
+// Styling general elements
+// ==============================================
 
-@base-font-size: 10;
+@import "_elements";
 
-// Project settings
+// ==============================================
+// Specific stylings
+// ==============================================
 
-@mobile-width: 40em;
-
-@f-header: 'Abel', sans-serif;
-@f-body: 'Abel', san-serif;
-
-@d2-blue: #0873ba;
-@d2-green: #3ab66a;
-@d2-orange: #f7901e;
-
-/* Arrows */
-
-.arrowbox-example {
-	.arrowbox( up, 15px, #fff, 1px, #999 );
-	margin: 30px 0;
-	max-width: 300px;
-	padding: 20px;
-}
-
-.clearfix {
-  zoom: 1;
-	&:before, &:after { content: ""; display: table; }
-	&:after { clear: both; }
-}
-
-/* text alignment */
-.text-left   { text-align: left; }
-.text-center { text-align: center; }
-.text-right  { text-align: right; }
-
-/* General */
-body {
-	font-family: @f-body;
-	font-weight: 500;
-}
-
-li {
-	list-style: none;
-	
-	img { 
-		max-width: 100%;
-	}
-}
-
-header {
-	box-sizing: border-box;
-	background: @d2-orange;
-	z-index: 9999;
-}
-
-.section {
-	padding-bottom: 5em;
-}
-
-#testimonials {
-	text-align: center;
-	
-	li {
-		font-size: 1.25em;
-		
-		&.sixcol {
-			font-size: 1.618em;
-		}
-	}
-}
-
-#our-process {
-	
-	#computer {
-
-		
-		img {
-			width: 100%; 
-			height: auto;
-		}
-	}
-}
+@import "_header";
+@import "_body";
+@import "_footer";
 

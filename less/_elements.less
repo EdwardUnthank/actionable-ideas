@@ -1,0 +1,115 @@
+/******************************************************************
+Site Name: Actionable Ideas
+Author: Edward Unthank
+
+Stylesheet: General Elements
+
+******************************************************************/
+
+body {
+	font-family: @f-body;
+	font-weight: 500;
+}
+
+a {
+	color: @link-color;
+	text-decoration: none;
+	
+	&:hover {
+		color: @link-hover;
+	}
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+	list-style: none;
+	padding: 1em;
+	margin-bottom: 2em;
+	
+	&:nth-child(even) {
+		background-color: lighten(@c-subtle, 15%);
+	}
+	
+	h5 {
+		font-size: 1.2em;
+		margin: 0;
+	}
+	
+	p {
+		color: @gray;
+		font-weight: 400;
+		line-height: 1.3em;
+	}
+	
+	span {
+		padding: .5em;
+		font-size: .7em;
+		border: 1px solid @c-subtle;
+		color: lighten(@gray, 10%);
+		.border-radius(4px);
+		text-transform: uppercase;
+		
+		
+		&:hover {
+			background: lighten(@c-subtle, 10%);
+		}
+		
+		&:active {
+			background: @c-subtle;
+		}
+		
+	}
+	
+	img { 
+		max-width: 100%;
+	}
+}
+
+form {
+	input {
+		padding: .5em;
+		.boxShadow(none);
+		.border-radius(3px);
+		border: 1px solid darken(@c-subtle,15%);
+		
+		&[type=submit] {
+			background: lighten(@c-emphasis,10%);
+			border: 1px solid darken(@c-emphasis,15%);
+			color: darken(@c-normal,10%);
+		}
+	}
+}
+
+header {
+	box-sizing: border-box;
+	background: @c-emphasis;
+	z-index: 9999;
+	padding: 1em;
+	.boxShadow(0px,10px,0px,0px,darken(@c-emphasis, 20%));
+	margin-bottom: 4px;
+}
+
+section {
+	padding: 3em;
+	text-align: center;
+	background-color: @c-subtle;
+	.boxShadow(0px,3px,0px,0px,darken(@c-subtle, 10%));
+}
+
+article { 
+	padding: 1em;
+}
+
+footer { 
+
+	p {
+		text-align: center;
+		border-top: 4px solid @c-normal;
+		padding: 1em;
+		margin: auto 5em;
+		font-size: .9em;
+	}
+}

@@ -1,5 +1,12 @@
 /******************************************************************
-Site Name: WelStand Insoles
+Site Name: Actionable Ideas
+Author: Edward Unthank
+
+Stylesheet: Compilation of all stylesheets
+
+******************************************************************/
+/******************************************************************
+Site Name: Actionable Ideas
 Author: Edward Unthank
 
 Stylesheet: Grid Stylesheet
@@ -104,108 +111,784 @@ values are commented out on each line.
 .last {
   float: right;
 }
-/* Arrows */
-/* line 29, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
-.arrowbox-example {
-  position: relative;
-  background: #ffffff;
-  border: 1px solid #999999;
-  margin: 30px 0;
-  max-width: 300px;
-  padding: 20px;
-}
-/* line 15, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/arrows.less */
-.arrowbox-example:after,
-.arrowbox-example:before {
-  bottom: 100%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-/* line 26, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/arrows.less */
-.arrowbox-example:after {
-  border-color: transparent;
-  border-bottom-color: #ffffff;
-  border-width: 15px;
-  left: 50%;
-  margin-left: -15px;
-}
-/* line 44, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/arrows.less */
-.arrowbox-example:before {
-  border-color: transparent;
-  border-bottom-color: #999999;
-  border-width: 16px;
-  left: 50%;
-  margin-left: -16px;
-}
-/* line 36, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+/******************************************************************
+Site Name: Actionable Ideas
+Author: Edward Unthank
+
+Stylesheet: More mixins
+
+******************************************************************/
+/*********************
+CLEARFIXIN'
+*********************/
+/* line 14, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
 .clearfix {
   zoom: 1;
 }
-/* line 38, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+/* line 16, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
 .clearfix:before,
 .clearfix:after {
   content: "";
   display: table;
 }
-/* line 39, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+/* line 17, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
 .clearfix:after {
   clear: both;
 }
+/*********************
+TOOLS
+*********************/
+/* line 25, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 32, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
+.image-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/*********************
+TYPOGRAPHY
+*********************/
+/* 	To embed your own fonts, use this syntax
+	and place your fonts inside the 
+	library/fonts folder. For more information
+	on embedding fonts, go to:
+	http://www.fontsquirrel.com/
+	Be sure to remove the comment brackets.
+*/
+/*	@font-face {
+    	font-family: 'Font Name';
+    	src: url('../fonts/font-name.eot');
+    	src: url('../fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/font-name.woff') format('woff'),
+             url('../fonts/font-name.ttf') format('truetype'),
+             url('../fonts/font-name.svg#font-name') format('svg');
+    	font-weight: normal;
+    	font-style: normal;
+	}
+*/
+/* 
+use the best ampersand 
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+/* line 94, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
+span.amp {
+  font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+  font-style: italic;
+}
 /* text alignment */
-/* line 43, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+/* line 100, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
 .text-left {
   text-align: left;
 }
-/* line 44, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+/* line 101, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
 .text-center {
   text-align: center;
 }
-/* line 45, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+/* line 102, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
 .text-right {
   text-align: right;
 }
-/* General */
-/* line 48, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+/* line 106, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
+.alert {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+}
+/* line 112, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
+.alert-help {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-color: #e8dc59;
+  background: #ebe16f;
+}
+/* line 118, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
+.alert-info {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-color: #bfe4f4;
+  background: #d5edf8;
+}
+/* line 124, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
+.alert-error {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-color: #f8cdce;
+  background: #fbe3e4;
+}
+/* line 130, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
+.alert-success {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-color: #deeaae;
+  background: #e6efc2;
+}
+/*********************
+BORDER RADIUS
+*********************/
+/* 
+NOTE: For older browser support (and some mobile), 
+don't use the shorthand to define *different* corners. 
+
+USAGE: .border-radius(4px); 
+
+*/
+/*********************
+TRANISTION
+*********************/
+/* .transition(all,2s); */
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can 
+really slow down your CSS. Don't overdo it.
+*********************/
+/* .css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SHADOW
+*********************/
+/* .boxShadow(0,0,4px,0,#444); */
+/* .boxShadow(none); */
+/*********************
+BUTTONS
+*********************/
+/* line 204, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
+.button,
+.button:visited {
+  border: 1px solid #243700;
+  border-top-color: #385500;
+  border-left-color: #385500;
+  padding: 3px 10px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 20px;
+  line-height: 21px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #3e6000;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#4f7900), to(#3e6000));
+  background-image: -webkit-linear-gradient(top, #4f7900, #3e6000);
+  background-image: -moz-linear-gradient(top, #4f7900, #3e6000);
+  background-image: -o-linear-gradient(top, #4f7900, #3e6000);
+  background-image: linear-gradient(to bottom, #4f7900, #3e6000);
+}
+/* line 222, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
+.button:hover,
+.button:visited:hover,
+.button:focus,
+.button:visited:focus {
+  color: #ffffff;
+  border: 1px solid #243700;
+  border-top-color: #0c1300;
+  border-left-color: #0c1300;
+  background-color: #2e4600;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3e6000), to(#2e4600));
+  background-image: -webkit-linear-gradient(top, #3e6000, #2e4600);
+  background-image: -moz-linear-gradient(top, #3e6000, #2e4600);
+  background-image: -o-linear-gradient(top, #3e6000, #2e4600);
+  background-image: linear-gradient(to bottom, #3e6000, #2e4600);
+}
+/* line 230, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
+.button:active,
+.button:visited:active {
+  background-color: #4f7900;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3e6000), to(#4f7900));
+  background-image: -webkit-linear-gradient(top, #3e6000, #4f7900);
+  background-image: -moz-linear-gradient(top, #3e6000, #4f7900);
+  background-image: -o-linear-gradient(top, #3e6000, #4f7900);
+  background-image: linear-gradient(to bottom, #3e6000, #4f7900);
+}
+/* line 235, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
+.green-button,
+.green-button:visited {
+  border-color: #a0ce1f;
+  text-shadow: 0 1px 1px #a0ce1f;
+  background-color: #afdf28;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b7e23e), to(#afdf28));
+  background-image: -webkit-linear-gradient(top, #b7e23e, #afdf28);
+  background-image: -moz-linear-gradient(top, #b7e23e, #afdf28);
+  background-image: -o-linear-gradient(top, #b7e23e, #afdf28);
+  background-image: linear-gradient(to bottom, #b7e23e, #afdf28);
+  -webkit-box-shadow: inset 0 0 3px #d1ed85;
+  -moz-box-shadow: inset 0 0 3px #d1ed85;
+  box-shadow: inset 0 0 3px #d1ed85;
+}
+/* line 242, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
+.green-button:hover,
+.green-button:visited:hover,
+.green-button:focus,
+.green-button:visited:focus {
+  border-color: #8fb81c;
+  background-color: #a0ce1f;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b0df2c), to(#a0ce1f));
+  background-image: -webkit-linear-gradient(top, #b0df2c, #a0ce1f);
+  background-image: -moz-linear-gradient(top, #b0df2c, #a0ce1f);
+  background-image: -o-linear-gradient(top, #b0df2c, #a0ce1f);
+  background-image: linear-gradient(to bottom, #b0df2c, #a0ce1f);
+}
+/* line 246, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
+.green-button:active,
+.green-button:visited:active {
+  background-color: #b7e23e;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#afdf28), to(#b7e23e));
+  background-image: -webkit-linear-gradient(top, #afdf28, #b7e23e);
+  background-image: -moz-linear-gradient(top, #afdf28, #b7e23e);
+  background-image: -o-linear-gradient(top, #afdf28, #b7e23e);
+  background-image: linear-gradient(to bottom, #afdf28, #b7e23e);
+}
+/******************************************************************
+Site Name: Actionable Ideas
+Author: Edward Unthank
+
+Stylesheet: Variables & Overrides
+
+******************************************************************/
+/* normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
+/* line 5, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+/* line 18, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+/* line 25, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/* line 29, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+[hidden] {
+  display: none;
+}
+/* line 32, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+/* line 37, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+/* line 44, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
 body {
-  font-family: 'Abel', san-serif;
+  margin: 0;
+}
+/* line 47, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+a:focus {
+  outline: thin dotted;
+}
+/* line 50, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+a:hover,
+a:active {
+  outline: 0;
+}
+/* line 54, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/* line 58, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+/* line 62, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+/* line 66, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+/* line 70, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+/* line 74, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+/* line 78, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/* line 81, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+b,
+strong {
+  font-weight: bold;
+}
+/* line 85, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+blockquote {
+  margin: 1em 40px;
+}
+/* line 88, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+dfn {
+  font-style: italic;
+}
+/* line 91, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/* line 95, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+p,
+pre {
+  margin: 1em 0;
+}
+/* line 99, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+/* line 107, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+/* line 112, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+q {
+  quotes: none;
+}
+/* line 115, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+/* line 120, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+small {
+  font-size: 75%;
+}
+/* line 123, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+/* line 130, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+sup {
+  top: -0.5em;
+}
+/* line 133, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+sub {
+  bottom: -0.25em;
+}
+/* line 136, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+/* line 142, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+dd {
+  margin: 0 0 0 40px;
+}
+/* line 145, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+/* line 150, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+/* line 155, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+/* line 159, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* line 162, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+figure {
+  margin: 0;
+}
+/* line 165, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+form {
+  margin: 0;
+}
+/* line 168, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/* line 173, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px;
+}
+/* line 179, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+/* line 188, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+button,
+input {
+  line-height: normal;
+}
+/* line 192, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+/* line 200, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+/* line 204, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px;
+}
+/* line 211, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+/* line 217, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+/* line 221, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/* line 226, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+/* line 230, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_resets.less */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/******************************************************************
+Site Name: Actionable Ideas
+Author: Edward Unthank
+
+Stylesheet: General Elements
+
+******************************************************************/
+/* line 9, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_elements.less */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
 }
-/* line 53, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+/* line 14, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_elements.less */
+a {
+  color: #4f7900;
+  text-decoration: none;
+}
+/* line 18, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_elements.less */
+a:hover {
+  color: #314b00;
+}
+/* line 23, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_elements.less */
+ul {
+  padding: 0;
+}
+/* line 27, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_elements.less */
 li {
   list-style: none;
+  padding: 1em;
+  margin-bottom: 2em;
 }
-/* line 56, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+/* line 32, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_elements.less */
+li:nth-child(even) {
+  background-color: #fafafa;
+}
+/* line 36, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_elements.less */
+li h5 {
+  font-size: 1.2em;
+  margin: 0;
+}
+/* line 41, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_elements.less */
+li p {
+  color: #222320;
+  font-weight: 400;
+  line-height: 1.3em;
+}
+/* line 47, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_elements.less */
+li span {
+  padding: .5em;
+  font-size: .7em;
+  border: 1px solid #d5d6d2;
+  color: #3c3e38;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+/* line 56, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_elements.less */
+li span:hover {
+  background: #eeeeed;
+}
+/* line 60, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_elements.less */
+li span:active {
+  background: #d5d6d2;
+}
+/* line 66, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_elements.less */
 li img {
   max-width: 100%;
 }
-/* line 61, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
+/* line 72, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_elements.less */
+form input {
+  padding: .5em;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #b0b2aa;
+}
+/* line 78, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_elements.less */
+form input[type=submit] {
+  background: #c8e96a;
+  border: 1px solid #8fb81c;
+  color: #2e4600;
+}
+/* line 86, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_elements.less */
 header {
   box-sizing: border-box;
-  background: #f7901e;
+  background: #b7e23e;
   z-index: 9999;
+  padding: 1em;
+  -webkit-box-shadow: 0px 10px 0px 0px #7ea218;
+  -moz-box-shadow: 0px 10px 0px 0px #7ea218;
+  box-shadow: 0px 10px 0px 0px #7ea218;
+  margin-bottom: 4px;
 }
-/* line 67, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
-.section {
-  padding-bottom: 5em;
-}
-/* line 71, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
-#testimonials {
+/* line 95, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_elements.less */
+section {
+  padding: 3em;
   text-align: center;
+  background-color: #d5d6d2;
+  -webkit-box-shadow: 0px 3px 0px 0px #bcbeb7;
+  -moz-box-shadow: 0px 3px 0px 0px #bcbeb7;
+  box-shadow: 0px 3px 0px 0px #bcbeb7;
 }
-/* line 74, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
-#testimonials li {
-  font-size: 1.25em;
+/* line 102, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_elements.less */
+article {
+  padding: 1em;
 }
-/* line 77, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
-#testimonials li.sixcol {
-  font-size: 1.618em;
+/* line 108, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_elements.less */
+footer p {
+  text-align: center;
+  border-top: 4px solid #4f7900;
+  padding: 1em;
+  margin: auto 5em;
+  font-size: .9em;
 }
-/* line 88, /Users/unthanke/Dropbox/Personal Websites/ideas/less/style.less */
-#our-process #computer img {
-  width: 100%;
-  height: auto;
+/******************************************************************
+Site Name: Actionable Ideas
+Author: Edward Unthank
+
+Stylesheet: Header
+
+******************************************************************/
+/* line 9, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_header.less */
+header {
+  zoom: 1;
+}
+/* line 134, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_helpers.less */
+header:before,
+header:after {
+  content: "";
+  display: table;
+}
+/* line 139, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_helpers.less */
+header:after {
+  clear: both;
+}
+/* line 142, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_helpers.less */
+.ie6 header,
+.ie7 header {
+  zoom: 1;
+}
+/* line 16, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
+header:before,
+header:after {
+  content: "";
+  display: table;
+}
+/* line 17, /Users/unthanke/Dropbox/Personal Websites/ideas/less/mixins/_misc.less */
+header:after {
+  clear: both;
+}
+/* line 13, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_header.less */
+header hgroup h1 {
+  float: left;
+  margin: 0;
+}
+/* line 17, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_header.less */
+header hgroup h3 {
+  float: left;
+  margin: 0;
+  font-weight: 500;
+  font-style: italic;
+  padding-left: 1em;
+  padding-top: .6em;
+}
+/******************************************************************
+Site Name: Actionable Ideas
+Author: Edward Unthank
+
+Stylesheet: Body
+
+******************************************************************//******************************************************************
+Site Name: Actionable Ideas
+Author: Edward Unthank
+
+Stylesheet: Footer
+
+******************************************************************/
+/** Mobile-first (small) View **/
+/* line 14, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_footer.less */
+div.holder {
+  position: fixed;
+  bottom: -0.3em;
+  font-size: 52px;
+  color: #eeeeed;
+  text-transform: uppercase;
+  z-index: -9999;
+}
+/* line 22, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_footer.less */
+div.holder div.word {
+  float: left;
+}
+/* line 25, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_footer.less */
+div.holder div.word .mobile {
+  float: left;
+}
+/* line 29, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_footer.less */
+div.holder div.word .tablet,
+div.holder div.word .desktop {
+  position: absolute;
+  top: 100px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/** Tablet (medium) View **/
+@media only screen and (min-width: 600px) {
+  /* line 46, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_footer.less */
+  div.holder div.word:after {
+    content: "\00a0";
+  }
+  /* line 50, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_footer.less */
+  div.holder div.word .tablet {
+    position: relative;
+    top: 0px;
+    float: left;
+  }
+}
+/** Desktop (large) View **/
+@media only screen and (min-width: 768px) {
+  /* line 67, /Users/unthanke/Dropbox/Personal Websites/ideas/less/_footer.less */
+  div.holder div.word .desktop {
+    position: relative;
+    top: 0px;
+    float: left;
+  }
 }

@@ -37,6 +37,14 @@
 	transition: @transition;
 }
 
+.transition(@what: all, @time: 0.5s, @transition: ease-in-out) {
+	-webkit-transition: @what @time @transition;
+	-moz-transition:    @what @time @transition;
+	-ms-transition:     @what @time @transition;
+	-o-transition:      @what @time @transition;
+	transition:         @what @time @transition;
+}
+
 .rotate(@rotation) {
 	-webkit-transform: rotate(@rotation);
 	-moz-transform: rotate(@rotation);

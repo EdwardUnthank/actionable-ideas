@@ -1,0 +1,75 @@
+/******************************************************************
+Site Name: Actionable Ideas
+Author: Edward Unthank
+
+Stylesheet: Footer
+
+******************************************************************/
+
+@f-size: 52px; //change depending on text-length
+@f-color: lighten(@c-subtle,10%);
+@m-bottom: -.3em; //change depending on x-height
+
+/** Mobile-first (small) View **/
+div.holder {
+  position: fixed;
+  bottom: @m-bottom;
+  font-size: @f-size;
+  color: @f-color;
+  text-transform: uppercase;
+  z-index: -9999;
+
+  div.word {
+    float:left;
+
+    .mobile{
+		  float: left;
+		}
+
+		.tablet,
+		.desktop{
+		  position: absolute;
+		  top: 100px;
+		  .transition();
+		}
+
+  }
+}
+
+/** Tablet (medium) View **/
+@media only screen and (min-width: 600px) {
+
+	div.holder {
+
+	  div.word {
+
+	    &:after{
+	      content: "\00a0";
+	    }
+
+			.tablet{
+		    position: relative;
+		    top: 0px;
+		    float: left;
+		   }
+
+	  }
+	}
+}
+
+/** Desktop (large) View **/
+@media only screen and (min-width: 768px) {
+
+	div.holder {
+
+	  div.word {
+
+			.desktop{
+		    position: relative;
+		    top: 0px;
+		    float: left;
+			}
+
+	  }
+	}
+}
