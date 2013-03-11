@@ -15,6 +15,12 @@
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
+    
+        <?php 
+        	// Establishing a DB connection
+	        require_once ('../login/connections.php');
+        ?>
+    
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -28,7 +34,7 @@
         
         <?php // Area to submit idea. At the top for easy access, as simple as possible ?>
         <section class="submit-idea">
-	        <form><!-- Submits to DB, immediately available. -->
+	        <form action="insert.php" method="post"><!-- Submits to DB, immediately available. -->
 	        	<input type="text" placeholder="short title" name="ideaTitle">
 	        	<input type="text" placeholder="submit an idea" name="ideaContent">
 	        	<input type="text" placeholder="category" name="ideaCategory">
@@ -39,22 +45,20 @@
         <?php // Content of the ideas go here ?>
         <article>
 	        <ul class="ideas">
-	        	<?php // Loop through DB to display results. ?>
-	        	<li class="idea-1 popularity-10 <?php //popularity-# pulled from DB ?>"><!-- popularity: upvoting functionality? request count? -->
-	        		<h5>Website for submission of great ideas so others can act on them</h5>
-	        		<p>A simple website where users can jot down their good ideas, even if they don't have the time/skills to act on them. A kind of "feature request" but for anything at all. No good idea should die just because its creator could not act on it.</p>
-	        		<span>Web Development</span>
-	        	</li>
-	        	<li class="idea-2 popularity-5">
-	        		<h5>Algorithm-based/Incremental "Forward" browser button</h5>
-	        		<p>On browsers, add functionality to the "Forward" button that sees the pattern of browsing and predicts your next step. E.g., if you're on a website and going to the next page of the site, increment the url in the page by one. ?page-id=($page-id+1)</p>
-	        		<span>Software</span>
-	        	</li>
-	        	<li class="idea-3 popularity-4">
-	        		<h5>Teaming up with CodePen.io for tracking individual ActionableIdea progress</h5>
-	        		<p>If there's an easy website coding request, set up a public CodePen that people can work on and view to see the progress. Doesn't have to be complex as a full GitHub repo, just a few lines of code kind of thing. Have the CodePen expandable underneath the idea, see the contributors.</p>
-	        		<span>Web Development</span>
-	        	</li>
+	        	<?php
+	        	// Loop through the results, adding a li to each.
+				$loop = mysql_query("SELECT * FROM content")
+				   or die (mysql_error());
+				
+				while ($row = mysql_fetch_array($loop))
+				{ 
+					echo "<li class=\"idea-" . $row['id'] . "\">";
+						echo "<h5>" . $row['title'] . "</h5>";
+						echo "<p>" . $row['content'] . "</p>";
+						echo "<span>" . $row['category'] . "</span>";
+					echo "</li>";
+				}
+				?>
 	        </ul>
         </article>
         
