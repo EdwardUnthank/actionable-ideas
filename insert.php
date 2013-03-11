@@ -1,5 +1,5 @@
 <?php 
-	require_once ('../login/connections.php');
+	require_once ('login/connections.php');
 	
 	$title = mysql_escape_string($_POST[ideaTitle]);
 	$content = mysql_escape_string($_POST[ideaContent]);

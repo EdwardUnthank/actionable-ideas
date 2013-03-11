@@ -18,7 +18,8 @@
     
         <?php 
         	// Establishing a DB connection
-	        require_once ('../login/connections.php');
+	        require_once ('login/connections.php');
+	        // This is purposefully accessible to the public. Putting in a lot of trust. Help make it secure, but so everyone can access it!
         ?>
     
         <!--[if lt IE 7]>
@@ -47,7 +48,7 @@
 	        <ul class="ideas">
 	        	<?php
 	        	// Loop through the results, adding a li to each.
-				$loop = mysql_query("SELECT * FROM content")
+				$loop = mysql_query("SELECT * FROM content ORDER BY id DESC")
 				   or die (mysql_error());
 				
 				while ($row = mysql_fetch_array($loop))
@@ -94,5 +95,21 @@
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
+        
+        <!-- Piwik -->
+		<script type="text/javascript">
+		  var _paq = _paq || [];
+		  _paq.push(["trackPageView"]);
+		  _paq.push(["enableLinkTracking"]);
+		
+		  (function() {
+		    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://analytics.edwardunthank.com/";
+		    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+		    _paq.push(["setSiteId", "4"]);
+		    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+		    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+		  })();
+		</script>
+		<!-- End Piwik Code -->
     </body>
 </html>
